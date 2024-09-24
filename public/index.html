@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>digitize</title>
+    <link rel="stylesheet" href="./build/tailwind.css" />
+  </head>
+  <body class="bg-stone-100">
+    <!-- app bar  Mobile-->
+    <div class="flex md:hidden items-center justify-between mt-12 px-5 mb-5">
+      <div>Logo</div>
+      <div class="text-base font-bold text-slate-800">ساعت هوشمند</div>
+      <div
+        class="text-slate-800 bg-white shadow-lg w-8 h-8 flex items-center justify-center rounded-md"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- filter Sort Mobile -->
+    <div class="flex md:hidden items-center justify-between px-5 gap-x-2 mb-9">
+      <div
+        class="bg-white p-2 rounded-lg flex items-center justify-start w-1/2"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 stroke-orange-600"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25"
+            />
+          </svg>
+        </div>
+        <span class="text-slate-800 font-normal text-base mr-2"
+          >محبوب‌ترین</span
+        >
+      </div>
+      <div
+        class="bg-white p-2 rounded-lg flex items-center justify-start w-1/2"
+      >
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 stroke-gray-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z"
+            />
+          </svg>
+        </div>
+        <span class="text-slate-800 font-normal text-[0.905rem] ml-6"
+          >فیلتر: برند اپل</span
+        >
+      </div>
+    </div>
+    <!-- desktop navbar -->
+    <nav class="sticky z-10 top-0 bg-white p-4 shadow-lg mb-5 hidden md:block">
+      <div
+        class="container mx-auto max-w-screen-2xl flex items-center justify-between"
+      >
+        <!-- navbar -->
+        <ul
+          class="flex items-center gap-x-0 lg:gap-x-4 text-slate-800 lg:text-lg"
+        >
+          <li>
+            <a href="#">LOGO</a>
+          </li>
+          <li>
+            <a
+              class="block px-4 py-2 hover:bg-gray-100 rounded-lg transition-all duration-500"
+              href="#"
+              >خانه</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-4 py-2 hover:bg-gray-100 rounded-lg transition-all duration-500"
+              href="#"
+              >تلفن همراه</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-4 py-2 hover:bg-gray-100 rounded-lg transition-all duration-500"
+              href="#"
+              >لپ تاپ</a
+            >
+          </li>
+          <li>
+            <a
+              class="block px-4 py-2 hover:bg-gray-100 rounded-lg transition-all duration-500"
+              href="#"
+              >ساعت هوشمند</a
+            >
+          </li>
+        </ul>
+        <!-- search -->
+        <div class="flex-1 max-w-xl mr-4">
+          <div class="bg-gray-100 rounded-lg flex items-center p-1">
+            <!-- icon -->
+            <span class="ml-3 mr-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </span>
+            <input
+              class="focus:outline-none focus:ring-0 focus:border-transparent border-transparent ring-0 bg-transparent w-full p-2 text-slate-800"
+              type="text"
+              placeholder="  نام محصول، نام برند، نام مدل و ..."
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- section desktop -->
+    <div
+      class="grid grid-cols-12 md:grid-row-[55px_minmax(500px,_1fr)] md:gap-8 container mx-auto max-w-screen-2xl"
+    >
+      <!-- sidebar -->
+      <div class="col-s pan-4 lg:col-span-3 row-span-2 hidden md:block md:col-span-3">
+        <div
+          class="bg-white p-4 rounded-lg mr-6 max-h-[calc(100vh_-_130px)] overflow-auto sticky top-[100px]"
+        >
+          <!-- category -->
+          <div x-data="{clickId: 1, styleClick: 'text-slate-800'}" class="mb-5">
+            <div class="text-orange-500 font-bold text-xl mb-5">دسته بندی‌</div>
+            <ul>
+              <li
+                @click="clickId = 1"
+                :class="clickId === 1 ? styleClick : ''"
+                class="text-gray-400 hover:bg-gray-50 rounded-xl mb-5"
+              >
+                <a href="#" class="p-1 flex items-center"
+                  ><span class="relative w-5 h-5 rounded-full bg-gray-300"
+                    ><svg
+                      class="w-4 h-4 absolute -bottom-1.5 left-0"
+                      stroke="currentColor"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.625h-3"
+                        stroke-width="1.125"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M6.99984 13.825c.64203 0 1.1625-.5205 1.1625-1.1625 0-.642-.52047-1.1625-1.1625-1.1625-.64203 0-1.1625.5205-1.1625 1.1625 0 .642.52047 1.1625 1.1625 1.1625Z"
+                        stroke-width="1.125"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      /></svg
+                  ></span>
+                  <span class="mr-2 text-xl">تلفن همراه</span></a
+                >
+              </li>
+              <li
+                @click="clickId = 2"
+                :class="clickId === 2 ? styleClick : ''"
+                class="text-gray-400 hover:bg-gray-50 rounded-xl mb-5"
+              >
+                <a href="#" class="p-1 flex items-center"
+                  ><span class="relative w-5 h-5 rounded-full bg-gray-300"
+                    ><svg
+                      class="w-4 h-4 absolute -bottom-1.5 left-0"
+                      stroke="currentColor"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.29331 1.3335H11.7c2.3733 0 2.9666.59333 2.9666 2.96v4.22c0 2.3733-.5933 2.96-2.96 2.96H4.29331c-2.36666.0067-2.96-.5867-2.96-2.95334V4.2935c0-2.36667.59334-2.96 2.96-2.96ZM8 11.48v3.1866M1.33331 8.6665H14.6666M5 14.6665h6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      /></svg
+                  ></span>
+                  <span class="mr-2 text-xl">لپ تاپ</span></a
+                >
+              </li>
+              <li
+                @click="clickId = 3"
+                :class="clickId === 3 ? styleClick : ''"
+                class="text-gray-400 hover:bg-gray-50 rounded-xl"
+              >
+                <a href="#" class="p-1 flex items-center"
+                  ><span class="relative w-5 h-5 rounded-full bg-gray-300"
+                    ><svg
+                      class="w-4 h-4 absolute -bottom-1.5 left-0"
+                      stroke="currentColor"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.66646 12.6668h4.66664c1.5534 0 2.3334-.78 2.3334-2.3333V5.66683c0-1.55333-.78-2.33333-2.3334-2.33333H5.66646c-1.55333 0-2.33333.78-2.33333 2.33333v4.66667c0 1.5533.78 2.3333 2.33333 2.3333ZM10.6665 1.3335H5.33313M10.6665 14.6665H5.33313"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M7.66687 6.3335v2h2"
+                        stroke-miterlimit="10"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      /></svg
+                  ></span>
+                  <span class="mr-2 text-xl">ساعت هوشمند</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- line -->
+          <hr class="bg-gray-400 mx-5 mb-3" />
+          <!-- desktop filters -->
+          <div>
+            <div class="text-orange-500 font-bold text-xl mb-5">فیلتر</div>
+            <!-- accordion 1 -->
+            <div x-data="{isOpen1: false , isActive: 'rotate-180'}">
+              <!-- head -->
+              <div
+                @click="isOpen1 = !isOpen1"
+                class="flex items-center justify-between hover:bg-gray-50 rounded-xl mb-7"
+              >
+                <!-- icon & title -->
+                <div class="flex items-center justify-center">
+                  <span class="relative w-5 h-5 rounded-full bg-gray-300"
+                    ><svg
+                      class="w-5 h-5 absolute -bottom-1.5 left-0"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.8334 13.271H1.16669c-.23917 0-.437503-.1983-.437503-.4375s.198333-.4375.437503-.4375H12.8334c.2391 0 .4375.1983.4375.4375s-.1984.4375-.4375.4375Z"
+                        fill="#222F5D"
+                      />
+                      <path
+                        d="M2.15845 12.8331h-.875l.02917-7.01752c0-.49583.22749-.95665.61833-1.25998l4.08333-3.17917c.5775-.449171 1.38834-.449171 1.97167 0l4.08335 3.17333c.385.30333.6183.77582.6183 1.26582v7.01752h-.875V5.82142c0-.22166-.105-.43749-.28-.57749L7.44928 2.07059c-.2625-.20416-.63-.20416-.89833 0L2.46762 5.24977c-.175.13416-.28.34999-.28.57165l-.02917 7.01168Z"
+                        fill="#222F5D"
+                      />
+                      <path
+                        d="M9.91665 13.2707H4.08331c-.23916 0-.4375-.1984-.4375-.4375V7.2915c0-.72333.58917-1.3125 1.3125-1.3125h4.08334c.72333 0 1.31245.58917 1.31245 1.3125v5.5417c0 .2391-.1983.4375-.43745.4375Zm-5.39584-.875h4.95834V7.2915c0-.23916-.19834-.4375-.4375-.4375H4.95831c-.23916 0-.4375.19834-.4375.4375v5.1042Z"
+                        fill="#222F5D"
+                      />
+                      <path
+                        d="M5.83331 10.7915c-.23916 0-.4375-.1983-.4375-.4375v-.875c0-.23916.19834-.4375.4375-.4375.23917 0 .4375.19834.4375.4375v.875c0 .2392-.19833.4375-.4375.4375ZM7.875 4.8125h-1.75c-.23917 0-.4375-.19833-.4375-.4375s.19833-.4375.4375-.4375h1.75c.23917 0 .4375.19833.4375.4375s-.19833.4375-.4375.4375Z"
+                        fill="#222F5D"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-lg font-medium mr-2 text-slate-800"
+                    >برند محصول</span
+                  >
+                </div>
+                <!-- chevrone -->
+                <div>
+                  <svg
+                    class="w-4 h-4 text-slate-800 transition-all duration-500"
+                    :class="isOpen1 ? isActive : ''"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- content -->
+              <div x-show="isOpen1 === true" class="flex flex-col gap-y-1">
+                <label
+                  for="apple"
+                  class="block mb-3 mr-6 text-slate-800 cursor-pointer hover:bg-gray-50 rounded-xl p-1 pr-0"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="apple"
+                    class="form-checkbox rounded-md focus:ring-0"
+                  />
+                  اپل
+                </label>
+                <label
+                  for="samsung"
+                  class="block mb-3 mr-6 text-slate-800 cursor-pointer hover:bg-gray-50 rounded-xl p-1 pr-0"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="samsung"
+                    class="form-checkbox rounded-md focus:ring-0"
+                  />
+                  سامسونگ
+                </label>
+                <label
+                  for="xiaomi"
+                  class="block mb-3 mr-6 text-slate-800 cursor-pointer hover:bg-gray-50 rounded-xl p-1 pr-0"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="xiaomi"
+                    class="form-checkbox rounded-md focus:ring-0"
+                  />
+                  شیائومی
+                </label>
+                <label
+                  for="huawei"
+                  class="block mb-3 mr-6 text-slate-800 cursor-pointer hover:bg-gray-50 rounded-xl p-1 pr-0"
+                >
+                  <input
+                    type="checkbox"
+                    name="brand"
+                    id="huawei"
+                    class="form-checkbox rounded-md focus:ring-0"
+                  />
+                  هواوی
+                </label>
+              </div>
+            </div>
+            <!-- accordion 2 -->
+            <div x-data="{isOpen1: false , isActive: 'rotate-180'}">
+              <!-- head -->
+              <div
+                @click="isOpen1 = !isOpen1"
+                class="flex items-center justify-between hover:bg-gray-50 rounded-xl mb-7"
+              >
+                <!-- icon & title -->
+                <div class="flex items-center justify-center">
+                  <span class="relative w-5 h-5 rounded-full bg-gray-300">
+                    <svg
+                      class="w-5 h-5 absolute"
+                      width="19"
+                      height="21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.83335 9.62484v7.87496c0 .63-.25667 1.2075-.66501 1.6275l-.02332.0234c-.0525.0525-.11083.105-.16333.1458-.175.1517-.37334.2683-.57751.35-.06417.0292-.12833.0525-.19249.0758-.2275.0759-.4725.1109-.71167.1109-.1575 0-.31499-.0175-.46666-.0467-.07583-.0175-.15167-.035-.22751-.0583-.09333-.0292-.18083-.0584-.26833-.0992 0-.0058 0-.0058-.00584 0-.16333-.0817-.32082-.175-.46665-.2858l-.00584-.0059c-.07584-.0583-.14583-.1166-.21-.1866-.06416-.07-.12834-.14-.19251-.2159-.11083-.1458-.20416-.3033-.28582-.4666.00583-.0059.00583-.0059 0-.0059 0 0-.00001-.0058-.00584-.0116-.035-.0817-.06417-.1692-.09334-.2567-.02333-.0758-.04083-.1517-.05833-.2275-.02917-.1517-.04666-.3092-.04666-.4667V9.62484c0-.875.58333-1.45834 1.45833-1.45834h1.75c.875 0 1.45833.58334 1.45833 1.45834Z"
+                        stroke="#222F5D"
+                        stroke-width=".875"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M12.8333 16.6248v1.75c0 .875-.5833 1.4584-1.4583 1.4584H3.5c.23917 0 .48417-.035.71167-.1109.06416-.0233.12832-.0466.19249-.0758.20417-.0817.40251-.1983.57751-.35.0525-.0408.11083-.0933.16333-.1458l.02332-.0234L9.135 15.1665h2.24c.875 0 1.4583.5833 1.4583 1.4583ZM2.80578 19.7285c-.35-.105-.68249-.2975-.95666-.5775-.28-.2742-.47251-.6067-.57751-.9567.2275.7292.805 1.3067 1.53417 1.5342Z"
+                        stroke="#222F5D"
+                        stroke-width=".875"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="m10.7158 13.5857-1.58085 1.5809-3.96668 3.9608c.40834-.42.66501-.9975.66501-1.6275v-5.635l1.58083-1.5808c.61833-.61837 1.44667-.61837 2.06501 0l1.23668 1.2366c.6183.6184.6183 1.4467 0 2.065ZM3.50002 18.0832c.32217 0 .58333-.2612.58333-.5834 0-.3221-.26116-.5833-.58333-.5833s-.58333.2612-.58333.5833c0 .3222.26116.5834.58333.5834Z"
+                        stroke="#222F5D"
+                        stroke-width=".875"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <circle
+                        cx="9.5"
+                        cy="9.5"
+                        r="9.5"
+                        fill="#AFAFAF"
+                        fill-opacity=".29"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-lg font-medium mr-2 text-slate-800"
+                    >رنگ محصول</span
+                  >
+                </div>
+                <!-- chevrone -->
+                <div>
+                  <svg
+                    class="w-4 h-4 text-slate-800 transition-all duration-500"
+                    :class="isOpen1 ? isActive : ''"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- content -->
+              <div x-show="isOpen1 === true" class="flex flex-col gap-y-1">
+                <label
+                  for="red"
+                  class="block mb-3 mr-6 text-slate-800 cursor-pointer hover:bg-gray-50 rounded-xl p-1 pr-0"
+                >
+                  <input
+                    type="checkbox"
+                    name="color"
+                    id="red"
+                    class="form-checkbox rounded-md text-red-500 focus:ring-0"
+                  />
+                  قرمز
+                </label>
+                <label
+                  for="green"
+                  class="block mb-3 mr-6 text-slate-800 cursor-pointer hover:bg-gray-50 rounded-xl p-1 pr-0"
+                >
+                  <input
+                    type="checkbox"
+                    name="color"
+                    id="green"
+                    class="form-checkbox rounded-md text-green-500 focus:ring-0"
+                  />
+                  سبز
+                </label>
+                <label
+                  for="blue"
+                  class="block mb-3 mr-6 text-slate-800 cursor-pointer hover:bg-gray-50 rounded-xl p-1 pr-0"
+                >
+                  <input
+                    type="checkbox"
+                    name="color"
+                    id="blue"
+                    class="form-checkbox rounded-md text-blue-500 focus:ring-0"
+                  />
+                  آبی
+                </label>
+              </div>
+            </div>
+            <!-- accordion 3 -->
+            <div>
+              <!-- head -->
+              <div
+                class="flex items-center justify-between hover:bg-gray-50 rounded-xl mb-4"
+              >
+                <!-- icon & title -->
+                <div class="flex items-center justify-center">
+                  <span class="relative w-5 h-5 rounded-full bg-gray-300"
+                    ><svg
+                      class="w-5 h-5 absolute -bottom-1.5 left-0"
+                      width="14"
+                      height="14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.5234 7.90383c-.245.23917-.385.58334-.35.95084.0525.63.63 1.09083 1.26 1.09083h1.1084v.6942c0 1.2075-.9859 2.1933-2.1934 2.1933H3.65177c-1.2075 0-2.19333-.9858-2.19333-2.1933V6.71385c0-1.2075.98583-2.19334 2.19333-2.19334h6.69663c1.2075 0 2.1934.98584 2.1934 2.19334v.84h-1.1784c-.3266 0-.6241.12832-.84.34998Z"
+                        stroke="#222F5D"
+                        stroke-width=".875"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M1.45844 7.23877v-2.6658c0-.69417.42583-1.31253 1.07333-1.55753l4.63166-1.75c.72334-.274165 1.49917.26252 1.49917 1.03835v2.21666M13.1593 8.14917v1.20171c0 .32083-.2567.5833-.5833.59497h-1.1434c-.63 0-1.2075-.46083-1.26-1.09083-.035-.3675.105-.71167.35-.95084.2159-.22166.5134-.34998.84-.34998h1.2134c.3266.01167.5833.27414.5833.59497ZM4.08331 7h4.08334"
+                        stroke="#222F5D"
+                        stroke-width=".875"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text-lg font-medium mr-2 text-slate-800"
+                    >محدوده قیمت</span
+                  >
+                </div>
+                <!-- chevrone -->
+                <div>
+                  <svg
+                    class="w-4 h-4 text-slate-800 transition-all duration-500"
+                    :class="isOpen1 ? isActive : ''"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <!-- content -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sortbar -->
+      <div
+        class="bg-white px-3 col-span-8 lg:col-span-9 hidden md:block ml-5 rounded-md mb-3"
+      >
+        <div
+          x-data="{sort: 1 , activeClass: 'py-4 font-bold text-base ml-5 mr-3 text-slate-900 relative'}"
+          class="flex-row items-center justify-start"
+        >
+          <!-- icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-10 h-10 stroke-orange-600 bg-orange-100 inline"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25"
+            />
+          </svg>
+          <!-- head sort -->
+          <button
+            @click="sort= 1"
+            :class="sort=== 1 ? activeClass : ''"
+            class="py-4 font-medium text-base ml-5 mr-3 text-gray-300 relative"
+          >
+            <span>محبوب‌ترین</span>
+            <span
+              x-show="sort === 1"
+              class="h-[6px] w-[6px] rounded-full bg-orange-600 absolute top-1 left-0"
+            ></span>
+          </button>
+          <button
+            @click="sort= 2"
+            :class="sort=== 2 ? activeClass : ''"
+            class="py-4 font-medium text-base ml-5 mr-3 text-gray-300 relative"
+          >
+            <span>ارزان ترین</span>
+            <span
+              x-show="sort === 2"
+              class="h-[6px] w-[6px] rounded-full bg-orange-600 absolute top-1 left-0"
+            ></span>
+          </button>
+          <button
+            @click="sort= 3"
+            :class="sort=== 3 ? activeClass : ''"
+            class="py-4 font-medium text-base ml-5 mr-3 text-gray-300 relative"
+          >
+            <span>گران‌ترین</span>
+            <span
+              x-show="sort === 3"
+              class="h-[6px] w-[6px] rounded-full bg-orange-600 absolute top-1 left-0"
+            ></span>
+          </button>
+          <button
+            @click="sort= 4"
+            :class="sort=== 4 ? activeClass : ''"
+            class="py-4 font-medium text-base ml-5 mr-3 text-gray-300 relative"
+          >
+            <span>پربازدیدترین</span>
+            <span
+              x-show="sort === 4"
+              class="h-[6px] w-[6px] rounded-full bg-orange-600 absolute top-1 left-0"
+            ></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- product -->
+      <div class="col-span-12 md:col-span-9 lg:col-span-9">
+        <div
+          x-data="{
+      products : [
+      {id:1,title:'ساعت هوشمند اپل سری 6',price:'1,750,000 تومان'},
+      {id:2,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:3,title:'ساعت هوشمند اپل سری 6',price:'1,750,000 تومان'},
+      {id:4,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:5,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:6,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:7,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:8,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:9,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:10,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:11,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:12,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:13,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:14,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      {id:15,title:'ساعت هوشمند اپل سری 3',price:'1,750,000 تومان'},
+      ]
+    }"
+          class="grid grid-cols-2 gap-x-2 gap-y-8 sm:gap-x-3 sm:gap-y-9 md:gap-x-6 md:gap-y-10 lg:grid-cols-4 px-5 md:p-0 md:pl-5"
+        >
+          <!-- cards -->
+          <template x-for="product in products" :key="product.id">
+            <div class="flex-col bg-white rounded-xl shadow-lg p-2">
+              <!-- image card -->
+              <div class="mb-2 bg-gray-100 rounded-md p-2">
+                <img src="/assets/images/apple-watch-7.png" alt="" />
+              </div>
+              <!-- circle and span -->
+              <div class="flex items-center justify-between mb-3 w-full">
+                <span class="text-sm text-slate-300">اپل</span>
+                <div
+                  x-data="{color:'rose'}"
+                  class="flex items-start justify-end"
+                >
+                  <div
+                    @click="color='rose'"
+                    :class="color === 'rose' ? 'ring-2 ring-rose-400' : ''"
+                    class="w-5 h-5 flex items-center justify-center md:w-[22px] md:h-[22px] -ml-[6px] border-2 border-white rounded-full cursor-pointer bg-rose-400"
+                  >
+                    <svg
+                      x-show="color === 'rose'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-3 w-3 stroke-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    @click="color='blue'"
+                    :class="color === 'blue' ? 'ring-2 ring-indigo-600' : ''"
+                    class="w-5 h-5 flex items-center justify-center md:w-[22px] md:h-[22px] -ml-[6px] border-2 border-white rounded-full cursor-pointer bg-indigo-600"
+                  >
+                    <svg
+                      x-show="color === 'blue'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-3 w-3 stroke-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    @click="color='yellow'"
+                    :class="color === 'yellow' ? 'ring-2 ring-yellow-300' : ''"
+                    class="w-5 h-5 flex items-center justify-center md:w-[22px] md:h-[22px] -ml-[6px] border-2 border-white rounded-full cursor-pointer bg-yellow-300"
+                  >
+                    <svg
+                      x-show="color === 'yellow'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-3 w-3 stroke-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    @click="color='orange'"
+                    :class="color === 'orange' ? 'ring-2 ring-orange-600' : ''"
+                    class="w-5 h-5 flex items-center justify-center md:w-[22px] md:h-[22px] -ml-[6px] border-2 border-white rounded-full cursor-pointer bg-orange-600"
+                  >
+                    <svg
+                      x-show="color === 'orange'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-3 w-3 stroke-white"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    @click="color='white'"
+                    :class="color === 'white' ? 'ring-2 ring-black' : ''"
+                    class="w-5 h-5 flex items-center justify-center md:w-[22px] md:h-[22px] -ml-[6px] rounded-full cursor-pointer border-2 border-gray-400 bg-stone-50"
+                  >
+                    <svg
+                      x-show="color === 'white'"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="h-3 w-3 stroke-black"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m4.5 12.75 6 6 9-13.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <!-- title -->
+              <div class="mb-2">
+                <span
+                  x-text="product.title"
+                  class="text-slate-900 text-xs font-bold sm:text-lg lg:text-sm xl:text-base"
+                >
+                </span>
+              </div>
+              <!-- price -->
+              <div class="flex items-center justify-end mb-3">
+                <span
+                  x-text="product.price"
+                  class="text-orange-700 text-sm font-semibold sm:text-lg lg:text-sm xl:text-base"
+                ></span>
+              </div>
+              <!-- hr -->
+              <hr class="mb-2" />
+              <!-- button -->
+              <div class="flex items-center justify-center mb-1 py-1">
+                <button class="text-orange-700 text-base font-bold">
+                  مشاهده و سفارش
+                </button>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+
+    <!-- bottom navigation mobile -->
+    <div
+      class="md:hidden shadow-[0_-4px_8px_0_rgba(0,0,0,0.1)] fixed bottom-0 left-0 right-0 w-full rounded-tr-md px-4 bg-white rounded-tl-md border border-t-2 border-slate-800"
+    >
+      <nav class="w-full">
+        <ul
+          x-data="{activeBottomTab : 1 , styleActiveTab : 'text-slate-800 stroke-slate-800 font-bold text-base'}"
+          class="flex items-center justify-between gap-x-2 w-full"
+        >
+          <li
+            @click="activeBottomTab = 1"
+            :class="activeBottomTab === 1 ? styleActiveTab : ''"
+            class="flex-auto"
+          >
+            <a href="#" class="flex items-center justify-center py-2"
+              ><span
+                ><svg
+                  class="text-gray-300"
+                  width="32"
+                  height="32"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m26.72 9.09358-7.68-5.37334c-2.0933-1.46666-5.3067-1.38666-7.32.17334L5.03999 9.10691C3.70665 10.1469 2.65332 12.2802 2.65332 13.9602v9.2c0 3.4 2.76 6.1734 6.16 6.1734H23.1867c3.4 0 6.16-2.76 6.16-6.16v-9.04c0-1.8-1.16-4.0134-2.6267-5.04002ZM17 24.0002c0 .5467-.4533 1-1 1s-1-.4533-1-1v-4c0-.5466.4533-1 1-1s1 .4534 1 1v4Z"
+                  /></svg></span
+              ><span x-show="activeBottomTab === 1" class="mr-1">خانه</span></a
+            >
+          </li>
+          <li
+            @click="activeBottomTab = 2"
+            :class="activeBottomTab === 2 ? styleActiveTab : ''"
+            class="flex-auto"
+          >
+            <a href="#" class="flex items-center justify-center py-2"
+              ><span
+                ><svg
+                  class="text-gray-300"
+                  width="34"
+                  height="34"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10.2568 2.8335H7.56516c-3.1025 0-4.73166 1.62916-4.73166 4.7175v2.6917c0 3.0883 1.62916 4.7175 4.71749 4.7175h2.69171c3.0883 0 4.7175-1.6292 4.7175-4.7175V7.551c.0141-3.08834-1.615-4.7175-4.7034-4.7175ZM26.4492 2.8335h-2.6917c-3.0883 0-4.7175 1.62916-4.7175 4.7175v2.6917c0 3.0883 1.6292 4.7175 4.7175 4.7175h2.6917c3.0883 0 4.7175-1.6292 4.7175-4.7175V7.551c0-3.08834-1.6292-4.7175-4.7175-4.7175ZM26.4492 19.0259h-2.6917c-3.0883 0-4.7175 1.6291-4.7175 4.7175v2.6916c0 3.0884 1.6292 4.7175 4.7175 4.7175h2.6917c3.0883 0 4.7175-1.6291 4.7175-4.7175v-2.6916c0-3.0884-1.6292-4.7175-4.7175-4.7175ZM10.2568 19.0259H7.56516c-3.1025 0-4.73166 1.6291-4.73166 4.7175v2.6916c0 3.1025 1.62916 4.7317 4.71749 4.7317h2.69171c3.0883 0 4.7175-1.6292 4.7175-4.7175v-2.6917c.0141-3.1025-1.615-4.7316-4.7034-4.7316Z"
+                  /></svg></span
+              ><span x-show="activeBottomTab === 2" class="mr-1"
+                >دسته بندی</span
+              ></a
+            >
+          </li>
+          <li
+            @click="activeBottomTab = 3"
+            :class="activeBottomTab === 3 ? styleActiveTab : ''"
+            class="flex-auto"
+          >
+            <a href="#" class="flex items-center justify-center py-2"
+              ><span
+                ><svg
+                  class="text-gray-300"
+                  width="34"
+                  height="34"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M28.2766 12.6934c-.9491-1.0483-2.38-1.6575-4.3633-1.87V9.74673c0-1.94083-.8217-3.81083-2.2667-5.11417-1.4591-1.33166-3.3575-1.955-5.3266-1.77083-3.3859.32583-6.2334 3.59833-6.2334 7.13997v.8217c-1.9833.2125-3.41413.8217-4.3633 1.87-1.37417 1.53-1.33167 3.57-1.17583 4.9867l.99166 7.8908c.2975 2.7625 1.41667 5.5958 7.50837 5.5958h7.905c6.0916 0 7.2108-2.8333 7.5083-5.5816l.9917-7.9192c.1558-1.4025.1841-3.4425-1.1759-4.9725ZM16.5183 4.8309c1.4167-.1275 2.7625.31166 3.8108 1.26083 1.0342.935 1.615 2.26667 1.615 3.655v.99167h-9.8883v-.7367c0-2.52164 2.0825-4.94414 4.4625-5.1708Zm-4.59 13.7983h-.0142c-.7791 0-1.4166-.6375-1.4166-1.4166 0-.7792.6375-1.4167 1.4166-1.4167.7934 0 1.4309.6375 1.4309 1.4167 0 .7791-.6375 1.4166-1.4167 1.4166Zm9.9167 0h-.0142c-.7792 0-1.4167-.6375-1.4167-1.4166 0-.7792.6375-1.4167 1.4167-1.4167.7933 0 1.4308.6375 1.4308 1.4167 0 .7791-.6375 1.4166-1.4166 1.4166Z"
+                  /></svg></span
+              ><span x-show="activeBottomTab === 3" class="mr-1"
+                >سبد خرید</span
+              ></a
+            >
+          </li>
+          <li
+            @click="activeBottomTab = 4"
+            :class="activeBottomTab === 4 ? styleActiveTab : ''"
+            class="flex-auto"
+          >
+            <a href="#" class="flex items-center justify-center py-2"
+              ><span
+                ><svg
+                  class="text-gray-300"
+                  width="29"
+                  height="25"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.8335.333496c-2.5111 0-4.7556 1.222224-6.1556 3.088894-1.4-1.86667-3.6444-3.088894-6.15551-3.088894C4.27794.333496.833496 3.80016.833496 8.06683c0 1.64444.266664 3.17777.711114 4.57777 2.17777 6.9111 8.93329 11.0667 12.26669 12.2.4666.1556 1.2444.1556 1.7111 0 3.3333-1.1333 10.0889-5.2667 12.2667-12.2.4666-1.4222.7111-2.93333.7111-4.57777.0222-4.26667-3.4223-7.733334-7.6667-7.733334Z"
+                  /></svg></span
+              ><span x-show="activeBottomTab === 4" class="mr-1"
+                >علاقه مندی</span
+              ></a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </body>
+</html>
